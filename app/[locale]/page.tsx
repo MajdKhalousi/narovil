@@ -43,37 +43,43 @@ const content = {
     },
 
     services: [
-      {
-        title: "تطوير مواقع ويب احترافية",
-        description:
-          "مواقع سريعة ومتجاوبة للشركات، الأفراد، والمتاجر، بتصميم حديث وتجربة استخدام واضحة.",
-      },
-      {
-        title: "تطوير تطبيقات Flutter",
-        description:
-          "تطبيقات Android و iOS من كود واحد، مناسبة للخدمات، المتاجر، الحجوزات، والأفكار الناشئة.",
-      },
-      {
-        title: "لوحات تحكم وأنظمة إدارة",
-        description:
-          "أنظمة تساعدك على إدارة الطلبات، المستخدمين، المنتجات، البيانات، والتقارير بسهولة.",
-      },
-      {
-        title: "تطوير APIs وربط الأنظمة",
-        description:
-          "بناء وربط واجهات برمجية بين الموقع، التطبيق، قاعدة البيانات، وخدمات الطرف الثالث.",
-      },
-      {
-        title: "متاجر إلكترونية وصفحات بيع",
-        description:
-          "حلول بيع رقمية تساعدك على عرض المنتجات، استقبال الطلبات، وتحسين تجربة العميل.",
-      },
-      {
-        title: "صيانة وتحسين الأداء",
-        description:
-          "تحسين سرعة الموقع، إصلاح المشاكل، ترتيب الكود، وإضافة ميزات جديدة حسب الحاجة.",
-      },
-    ],
+  {
+    icon: "💻",
+    title: "تطوير مواقع ويب احترافية",
+    description:
+      "مواقع سريعة ومتجاوبة مع صفحات خدمات، نموذج تواصل، ربط واتساب، وتحسين أساسي لمحركات البحث.",
+  },
+  {
+    icon: "📱",
+    title: "تطوير تطبيقات Flutter",
+    description:
+      "تطبيقات Android و iOS بواجهة حديثة، تسجيل دخول، قواعد بيانات، وربط مع APIs حسب حاجة المشروع.",
+  },
+  {
+    icon: "📊",
+    title: "لوحات تحكم وأنظمة إدارة",
+    description:
+      "Dashboards لإدارة الطلبات، المستخدمين، المنتجات، التقارير، والصلاحيات من مكان واحد.",
+  },
+  {
+    icon: "🔗",
+    title: "تطوير APIs وربط الأنظمة",
+    description:
+      "بناء واجهات برمجية وربط الموقع أو التطبيق مع قواعد البيانات، الدفع، واتساب، أو خدمات خارجية.",
+  },
+  {
+    icon: "🛒",
+    title: "متاجر إلكترونية وصفحات بيع",
+    description:
+      "متاجر وصفحات بيع لعرض المنتجات، استقبال الطلبات، إدارة العملاء، وتحسين تجربة الشراء.",
+  },
+  {
+    icon: "⚡",
+    title: "صيانة وتحسين الأداء",
+    description:
+      "تحسين السرعة، إصلاح الأخطاء، ترتيب الكود، حماية أفضل، وإضافة ميزات جديدة عند الحاجة.",
+  },
+],
 
     solutionsSection: {
       label: "Solutions",
@@ -202,37 +208,43 @@ const content = {
     },
 
     services: [
-      {
-        title: "Professional Web Development",
-        description:
-          "Fast, responsive websites for companies, individuals, and stores with modern design and clear user experience.",
-      },
-      {
-        title: "Flutter App Development",
-        description:
-          "Android and iOS apps from one codebase, suitable for services, stores, bookings, and startup ideas.",
-      },
-      {
-        title: "Dashboards & Management Systems",
-        description:
-          "Systems that help you manage orders, users, products, data, and reports from one place.",
-      },
-      {
-        title: "APIs & System Integration",
-        description:
-          "Building and connecting APIs between websites, apps, databases, and third-party services.",
-      },
-      {
-        title: "E-commerce & Sales Pages",
-        description:
-          "Digital selling solutions to display products, receive orders, and improve customer experience.",
-      },
-      {
-        title: "Maintenance & Performance",
-        description:
-          "Improving website speed, fixing issues, organizing code, and adding new features when needed.",
-      },
-    ],
+  {
+    icon: "💻",
+    title: "Professional Web Development",
+    description:
+      "Fast responsive websites with service pages, contact forms, WhatsApp integration, and basic SEO optimization.",
+  },
+  {
+    icon: "📱",
+    title: "Flutter App Development",
+    description:
+      "Android and iOS apps with modern UI, authentication, databases, and API integration based on project needs.",
+  },
+  {
+    icon: "📊",
+    title: "Dashboards & Management Systems",
+    description:
+      "Dashboards for managing orders, users, products, reports, permissions, and business operations from one place.",
+  },
+  {
+    icon: "🔗",
+    title: "APIs & System Integration",
+    description:
+      "Building APIs and connecting websites or apps with databases, payments, WhatsApp, and third-party services.",
+  },
+  {
+    icon: "🛒",
+    title: "E-commerce & Sales Pages",
+    description:
+      "Online stores and sales pages for displaying products, receiving orders, managing customers, and improving sales flow.",
+  },
+  {
+    icon: "⚡",
+    title: "Maintenance & Performance",
+    description:
+      "Speed optimization, bug fixing, code cleanup, better stability, and adding new features when needed.",
+  },
+],
 
     solutionsSection: {
       label: "Solutions",
@@ -514,8 +526,10 @@ export default async function Home({
               key={service.title}
               className="group rounded-3xl border border-white/10 bg-white/[0.035] p-7 transition hover:-translate-y-1 hover:border-[#4da3ff]/40 hover:bg-white/[0.06]"
             >
-              <div className="mb-6 h-12 w-12 rounded-2xl bg-[#4da3ff]/15 transition group-hover:bg-[#4da3ff]/25" />
-              <h3 className="text-xl font-bold">{service.title}</h3>
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#4da3ff]/15 text-2xl transition group-hover:bg-[#4da3ff]/25">
+  {service.icon}
+</div>
+<h3 className="text-xl font-bold">{service.title}</h3>
               <p className="mt-4 leading-8 text-white/55">
                 {service.description}
               </p>
