@@ -169,12 +169,18 @@ process: {
   ],
 },
 
-    about: {
-      label: "About",
-      title: "عن Majd Khalousi",
-      description:
-        "أعمل على بناء حلول رقمية عملية واحترافية تحت اسم NAROVIL. أركز على تطوير مواقع وتطبيقات وأنظمة تساعد العملاء على تحويل أفكارهم إلى منتجات رقمية حقيقية، مع اهتمام بجودة الكود، سرعة الأداء، وتجربة المستخدم.",
-    },
+   about: {
+  label: "About",
+  title: "عن Majd Khalousi",
+  description:
+    "أنا Majd Khalousi، مهندس برمجيات أعمل تحت اسم NAROVIL على بناء حلول رقمية عملية واحترافية. أركز على تطوير مواقع ويب، تطبيقات Flutter، ولوحات تحكم تساعد الأفراد والشركات والمتاجر على تحويل أفكارهم إلى منتجات رقمية حقيقية.",
+  points: [
+    "تطوير واجهات حديثة وسريعة ومتجاوبة",
+    "بناء تطبيقات Flutter لأنظمة Android و iOS",
+    "تصميم أنظمة إدارة ولوحات تحكم حسب الحاجة",
+    "كتابة كود منظم قابل للتطوير والصيانة",
+  ],
+},
 
     contact: {
       title: "هل لديك فكرة مشروع؟",
@@ -357,12 +363,18 @@ process: {
   ],
 },
 
-    about: {
-      label: "About",
-      title: "About Majd Khalousi",
-      description:
-        "I build practical and professional digital solutions under NAROVIL. I focus on websites, applications, and systems that help clients turn ideas into real digital products, with attention to code quality, performance, and user experience.",
-    },
+about: {
+  label: "About",
+  title: "About Majd Khalousi",
+  description:
+    "I’m Majd Khalousi, a software engineer building practical and professional digital solutions under NAROVIL. I focus on websites, Flutter apps, and dashboards that help individuals, businesses, and stores turn ideas into real digital products.",
+  points: [
+    "Modern, fast, and responsive interfaces",
+    "Flutter apps for Android and iOS",
+    "Custom dashboards and management systems",
+    "Clean, scalable, and maintainable code",
+  ],
+},
 
     contact: {
       title: "Do you have a project idea?",
@@ -673,27 +685,53 @@ export default async function Home({
           </div>
         </div>
       </section>
+{/* About */}
+<section id="about" className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+  <div className="grid items-center gap-10 md:grid-cols-[0.85fr_1.15fr]">
+    <div>
+      <p className="mb-3 text-sm font-semibold text-[#4da3ff]">
+        {t.about.label}
+      </p>
+      <h2 className="text-3xl font-black leading-tight md:text-5xl">
+        {t.about.title}
+      </h2>
 
-      {/* About */}
-      <section id="about" className="mx-auto max-w-7xl px-6 py-16 md:py-24">
-        <div className="grid items-center gap-10 md:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="mb-3 text-sm font-semibold text-[#4da3ff]">
-              {t.about.label}
-            </p>
-            <h2 className="text-3xl font-black md:text-5xl">
-              {t.about.title}
-            </h2>
-          </div>
-
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-8">
-            <p className="text-lg leading-10 text-white/65">
-              {t.about.description}
-            </p>
-          </div>
+      <div className="mt-8 grid grid-cols-2 gap-4">
+        <div className="rounded-3xl border border-white/10 bg-white/[0.035] p-5">
+          <p className="text-2xl font-black text-[#4da3ff]">Web</p>
+          <p className="mt-2 text-sm text-white/50">
+            {currentLocale === "ar" ? "مواقع احترافية" : "Professional websites"}
+          </p>
         </div>
-      </section>
 
+        <div className="rounded-3xl border border-white/10 bg-white/[0.035] p-5">
+          <p className="text-2xl font-black text-[#4da3ff]">Flutter</p>
+          <p className="mt-2 text-sm text-white/50">
+            {currentLocale === "ar" ? "تطبيقات موبايل" : "Mobile apps"}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-8">
+      <p className="text-lg leading-10 text-white/70">
+        {t.about.description}
+      </p>
+
+      <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        {t.about.points.map((point) => (
+          <div
+            key={point}
+            className="rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-7 text-white/60"
+          >
+            <span className="mb-3 block h-2 w-2 rounded-full bg-[#4da3ff]" />
+            {point}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
       {/* Contact */}
       <section
         id="contact"
