@@ -47,11 +47,11 @@ export const metadata: Metadata = {
   creator: "Majd Khalousi",
   publisher: "NAROVIL",
 
-  icons: {
-    icon: "/narovil-logo.png",
-    shortcut: "/narovil-logo.png",
-    apple: "/narovil-logo.png",
-  },
+ icons: {
+  icon: "/icon.png",
+  shortcut: "/icon.png",
+  apple: "/icon.png",
+},
 
   openGraph: {
     title: "NAROVIL | Premium Software Studio",
