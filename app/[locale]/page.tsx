@@ -221,16 +221,16 @@ process: {
   ],
 },
 
-   about: {
+about: {
   label: "About",
   title: "عن Majd Khalousi",
   description:
-    "أنا Majd Khalousi، مهندس برمجيات أعمل تحت اسم NAROVIL على بناء حلول رقمية عملية واحترافية. أركز على تطوير مواقع ويب، تطبيقات Flutter، ولوحات تحكم تساعد الأفراد والشركات والمتاجر على تحويل أفكارهم إلى منتجات رقمية حقيقية.",
+    "أنا Majd Khalousi، مهندس برمجيات، مالك ومؤسس براند NAROVIL. أعمل على بناء حلول رقمية عملية واحترافية تساعد الأفراد والشركات والمتاجر على تحويل أفكارهم إلى منتجات رقمية حقيقية، من مواقع ويب وتطبيقات Flutter إلى لوحات تحكم وأنظمة مخصصة.",
   points: [
+    "مالك ومؤسس NAROVIL Software Studio",
     "تطوير واجهات حديثة وسريعة ومتجاوبة",
     "بناء تطبيقات Flutter لأنظمة Android و iOS",
     "تصميم أنظمة إدارة ولوحات تحكم حسب الحاجة",
-    "كتابة كود منظم قابل للتطوير والصيانة",
   ],
 },
 
@@ -468,12 +468,12 @@ about: {
   label: "About",
   title: "About Majd Khalousi",
   description:
-    "I’m Majd Khalousi, a software engineer building practical and professional digital solutions under NAROVIL. I focus on websites, Flutter apps, and dashboards that help individuals, businesses, and stores turn ideas into real digital products.",
+    "I’m Majd Khalousi, a software engineer and the owner and founder of the NAROVIL brand. I build practical and professional digital solutions that help individuals, businesses, and stores turn their ideas into real digital products, from websites and Flutter apps to dashboards and custom systems.",
   points: [
+    "Owner and founder of NAROVIL Software Studio",
     "Modern, fast, and responsive interfaces",
     "Flutter apps for Android and iOS",
     "Custom dashboards and management systems",
-    "Clean, scalable, and maintainable code",
   ],
 },
 
