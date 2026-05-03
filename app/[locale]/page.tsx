@@ -23,11 +23,11 @@ const content = {
 
     hero: {
       badge: "حلول برمجية فاخرة للمشاريع الرقمية",
-      title: "نطوّر مواقع وتطبيقات تساعد مشروعك يظهر باحتراف",
-      description:
-        "أنا Majd Khalousi، مهندس برمجيات ومؤسس NAROVIL. أساعد الأفراد والشركات على تحويل الأفكار إلى مواقع ويب، تطبيقات Flutter، وأنظمة برمجية مخصصة تجمع بين الأداء، التصميم الراقي، وسهولة الاستخدام.",
-      primaryButton: "ابدأ مشروعك الآن",
-      secondaryButton: "استعرض الخدمات",
+      title: "نحوّل فكرتك إلى موقع أو تطبيق احترافي جاهز للنمو",
+description:
+  "أنا Majd Khalousi، مهندس برمجيات ومؤسس NAROVIL. أساعد الأفراد، الشركات، المتاجر، وأصحاب المشاريع الناشئة على بناء مواقع ويب، تطبيقات Flutter، وأنظمة إدارة مخصصة بواجهة راقية، أداء قوي، وتجربة استخدام واضحة.",
+primaryButton: "ناقش مشروعك الآن",
+secondaryButton: "شاهد الخدمات",
       stats: [
         { title: "Web", subtitle: "مواقع احترافية" },
         { title: "App", subtitle: "تطبيقات Flutter" },
@@ -180,7 +180,7 @@ process: {
       title: "هل لديك فكرة مشروع؟",
       description:
         "دعنا نحولها إلى موقع، تطبيق، أو نظام برمجي احترافي يناسب هدفك ويعطي مشروعك حضورًا أقوى.",
-      button: "تواصل عبر واتساب",
+      button: "ناقش مشروعك الآن",
     },
 
     footer: {
@@ -210,12 +210,12 @@ process: {
 
     hero: {
       badge: "Premium software solutions for digital projects",
-      title:
-        "We build websites and apps that make your business look professional",
-      description:
-        "I’m Majd Khalousi, a software engineer and founder of NAROVIL. I help individuals and businesses turn ideas into websites, Flutter apps, and custom software systems focused on performance, elegant design, and usability.",
-      primaryButton: "Start Your Project",
-      secondaryButton: "View Services",
+title:
+  "We turn your idea into a professional website or app ready to grow",
+description:
+  "I’m Majd Khalousi, a software engineer and founder of NAROVIL. I help individuals, businesses, online stores, and startup founders build websites, Flutter apps, and custom management systems with elegant design, strong performance, and clear user experience.",
+primaryButton: "Discuss Your Project",
+secondaryButton: "View Services",
       stats: [
         { title: "Web", subtitle: "Professional websites" },
         { title: "App", subtitle: "Flutter applications" },
@@ -368,7 +368,7 @@ process: {
       title: "Do you have a project idea?",
       description:
         "Let’s turn it into a professional website, app, or software system that fits your goals and strengthens your digital presence.",
-      button: "Contact via WhatsApp",
+      button: "Discuss Your Project",
     },
 
     footer: {
@@ -817,6 +817,16 @@ export default async function Home({
           <p>{t.footer.builtBy}</p>
         </div>
       </footer>
+      <a
+  href={whatsappUrl}
+  target="_blank"
+  aria-label={currentLocale === "ar" ? "ناقش مشروعك عبر واتساب" : "Discuss your project on WhatsApp"}
+  className={`fixed bottom-5 z-50 rounded-full bg-[#4da3ff] px-5 py-3 text-sm font-bold text-[#05070f] shadow-2xl shadow-[#4da3ff]/20 transition hover:-translate-y-1 hover:bg-[#7dbdff] ${
+    currentLocale === "ar" ? "left-5" : "right-5"
+  }`}
+>
+  {currentLocale === "ar" ? "واتساب" : "WhatsApp"}
+</a>
     </main>
   );
 }
