@@ -121,6 +121,58 @@ secondaryButton: "شاهد الخدمات",
       },
     ],
 
+
+packagesSection: {
+  label: "Packages",
+  title: "باقات تناسب مراحل مختلفة",
+  description:
+    "كل مشروع له تفاصيله، لذلك هذه الباقات مبدئية لتوضيح نوع الخدمة، ويتم تحديد السعر والمدة بعد فهم المتطلبات.",
+},
+
+packages: [
+  {
+    name: "Landing Page",
+    target: "للأفراد والمشاريع الصغيرة",
+    features: [
+      "صفحة هبوط احترافية",
+      "تصميم متجاوب للجوال والكمبيوتر",
+      "زر واتساب ونموذج تواصل",
+      "تحسين أساسي للسرعة و SEO",
+    ],
+    cta: "مناسبة للبداية",
+  },
+  {
+    name: "Business Website",
+    target: "للشركات والمتاجر",
+    features: [
+      "موقع متعدد الأقسام",
+      "صفحات خدمات أو منتجات",
+      "تصميم فاخر ومتجاوب",
+      "ربط واتساب أو أدوات خارجية",
+    ],
+    cta: "الأكثر طلبًا",
+  },
+  {
+    name: "Custom System",
+    target: "للأنظمة والتطبيقات الخاصة",
+    features: [
+      "لوحة تحكم أو تطبيق مخصص",
+      "تسجيل دخول وصلاحيات",
+      "قاعدة بيانات و APIs",
+      "قابلية تطوير لاحقًا",
+    ],
+    cta: "حسب المتطلبات",
+  },
+],
+
+
+
+
+
+
+
+    
+
 why: {
   label: "Why NAROVIL",
   title: "لماذا تختار NAROVIL؟",
@@ -315,6 +367,55 @@ secondaryButton: "View Services",
       },
     ],
 
+
+packagesSection: {
+  label: "Packages",
+  title: "Packages for Different Project Stages",
+  description:
+    "Every project has its own details, so these packages are only a starting point. Price and timeline are defined after understanding the requirements.",
+},
+
+packages: [
+  {
+    name: "Landing Page",
+    target: "For individuals and small projects",
+    features: [
+      "Professional landing page",
+      "Responsive mobile and desktop design",
+      "WhatsApp button and contact form",
+      "Basic speed and SEO optimization",
+    ],
+    cta: "Good starting point",
+  },
+  {
+    name: "Business Website",
+    target: "For companies and stores",
+    features: [
+      "Multi-section website",
+      "Service or product pages",
+      "Elegant responsive design",
+      "WhatsApp or external tool integration",
+    ],
+    cta: "Most requested",
+  },
+  {
+    name: "Custom System",
+    target: "For custom apps and systems",
+    features: [
+      "Custom dashboard or application",
+      "Authentication and permissions",
+      "Database and APIs",
+      "Ready for future growth",
+    ],
+    cta: "Based on requirements",
+  },
+],
+
+
+
+
+
+
 why: {
   label: "Why NAROVIL",
   title: "Why Choose NAROVIL?",
@@ -436,26 +537,35 @@ export default async function Home({
             </div>
           </a>
 
-          <nav className="hidden items-center gap-8 text-sm text-white/70 md:flex">
-            <a href="#services" className="transition hover:text-white">
-              {t.nav.services}
-            </a>
-            <a href="#solutions" className="transition hover:text-white">
-              {t.nav.solutions}
-            </a>
-            <a href="#why" className="transition hover:text-white">
-              {t.nav.why}
-            </a>
-            <a href="#process" className="transition hover:text-white">
-              {t.nav.process}
-            </a>
-            <a href="#about" className="transition hover:text-white">
-              {t.nav.about}
-            </a>
-            <a href="#contact" className="transition hover:text-white">
-              {t.nav.contact}
-            </a>
-          </nav>
+<nav className="hidden items-center gap-8 text-sm text-white/70 md:flex">
+  <a href="#services" className="transition hover:text-white">
+    {t.nav.services}
+  </a>
+
+  <a href="#solutions" className="transition hover:text-white">
+    {t.nav.solutions}
+  </a>
+
+  <a href="#packages" className="transition hover:text-white">
+    {currentLocale === "ar" ? "الباقات" : "Packages"}
+  </a>
+
+  <a href="#why" className="transition hover:text-white">
+    {t.nav.why}
+  </a>
+
+  <a href="#process" className="transition hover:text-white">
+    {t.nav.process}
+  </a>
+
+  <a href="#about" className="transition hover:text-white">
+    {t.nav.about}
+  </a>
+
+  <a href="#contact" className="transition hover:text-white">
+    {t.nav.contact}
+  </a>
+</nav>
 
           <div className="flex items-center gap-2">
            
@@ -631,6 +741,65 @@ export default async function Home({
           ))}
         </div>
       </section>
+
+
+
+
+{/* Packages */}
+<section id="packages" className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+  <div className="mb-12 max-w-2xl">
+    <p className="mb-3 text-sm font-semibold text-[#4da3ff]">
+      {t.packagesSection.label}
+    </p>
+    <h2 className="text-3xl font-black md:text-5xl">
+      {t.packagesSection.title}
+    </h2>
+    <p className="mt-5 text-lg leading-8 text-white/60">
+      {t.packagesSection.description}
+    </p>
+  </div>
+
+  <div className="grid gap-5 md:grid-cols-3">
+    {t.packages.map((pack, index) => (
+      <div
+        key={pack.name}
+        className={`rounded-[2rem] border p-7 transition hover:-translate-y-1 ${
+          index === 1
+            ? "border-[#4da3ff]/40 bg-[#07111f]"
+            : "border-white/10 bg-white/[0.035]"
+        }`}
+      >
+        <div className="mb-6 flex items-center justify-between gap-4">
+          <h3 className="text-2xl font-black">{pack.name}</h3>
+          <span className="rounded-full bg-[#4da3ff]/15 px-3 py-1 text-xs font-bold text-[#4da3ff]">
+            {pack.cta}
+          </span>
+        </div>
+
+        <p className="mb-6 leading-7 text-white/55">{pack.target}</p>
+
+        <ul className="space-y-4">
+          {pack.features.map((feature) => (
+            <li key={feature} className="flex gap-3 text-sm leading-7 text-white/65">
+              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#4da3ff]" />
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          className="mt-8 inline-flex w-full justify-center rounded-full border border-white/10 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10"
+        >
+          {currentLocale === "ar" ? "اطلب تفاصيل الباقة" : "Request Package Details"}
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
+
+
 
       {/* Why */}
       <section id="why" className="mx-auto max-w-7xl px-6 py-16 md:py-24">
