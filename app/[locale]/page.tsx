@@ -121,30 +121,53 @@ const content = {
       },
     ],
 
-    why: {
-      label: "Why NAROVIL",
-      title: "لماذا تختار NAROVIL؟",
-      items: [
-        "تصميم فاخر ومتجاوب",
-        "كود منظم وقابل للتطوير",
-        "تركيز على هدف المشروع",
-      ],
+why: {
+  label: "Why NAROVIL",
+  title: "لماذا تختار NAROVIL؟",
+  items: [
+    {
+      title: "تصميم فاخر ومتجاوب",
       description:
-        "نعمل على تقديم نتيجة واضحة، عملية، ومناسبة لاستخدام العميل النهائي.",
+        "واجهة حديثة تعمل بسلاسة على الجوال والكمبيوتر، وتعطي مشروعك حضورًا احترافيًا من أول زيارة.",
     },
-
-    process: {
-      label: "Process",
-      title: "طريقة العمل",
-      steps: [
-        "فهم الفكرة",
-        "تخطيط الحل",
-        "التصميم والتطوير",
-        "الاختبار والتسليم",
-      ],
+    {
+      title: "كود منظم وقابل للتطوير",
       description:
-        "نعمل بخطوات واضحة حتى يكون المشروع مفهوم، منظم، وجاهز للتطوير لاحقًا.",
+        "بناء برمجي مرتب يسهل تطويره لاحقًا، سواء لإضافة صفحات، لوحة تحكم، دفع إلكتروني، أو تطبيق موبايل.",
     },
+    {
+      title: "تركيز على هدف المشروع",
+      description:
+        "لا نكتفي بالشكل فقط؛ نركز على ما يحتاجه العميل فعليًا: تواصل أوضح، طلبات أكثر، وتجربة استخدام أفضل.",
+    },
+  ],
+},
+process: {
+  label: "Process",
+  title: "طريقة العمل",
+  steps: [
+    {
+      title: "فهم الفكرة",
+      description:
+        "نبدأ بفهم هدف المشروع، نوع العملاء، الميزات المطلوبة، والمشكلة التي تريد حلها.",
+    },
+    {
+      title: "تخطيط الحل",
+      description:
+        "نحدد الصفحات، الوظائف، قاعدة البيانات، والتقنيات المناسبة قبل بدء التطوير.",
+    },
+    {
+      title: "التصميم والتطوير",
+      description:
+        "نبني الواجهة والمنطق البرمجي بطريقة منظمة، متجاوبة، وقابلة للتطوير لاحقًا.",
+    },
+    {
+      title: "الاختبار والتسليم",
+      description:
+        "نراجع الأداء، التوافق مع الجوال، الروابط، وتجربة الاستخدام قبل إطلاق المشروع.",
+    },
+  ],
+},
 
     about: {
       label: "About",
@@ -286,30 +309,53 @@ const content = {
       },
     ],
 
-    why: {
-      label: "Why NAROVIL",
-      title: "Why Choose NAROVIL?",
-      items: [
-        "Elegant responsive design",
-        "Clean scalable code",
-        "Focus on project goals",
-      ],
+why: {
+  label: "Why NAROVIL",
+  title: "Why Choose NAROVIL?",
+  items: [
+    {
+      title: "Elegant responsive design",
       description:
-        "We focus on delivering clear, practical results that fit the end user’s needs.",
+        "Modern interfaces that work smoothly on mobile and desktop, giving your project a professional first impression.",
     },
-
-    process: {
-      label: "Process",
-      title: "How We Work",
-      steps: [
-        "Understanding",
-        "Planning",
-        "Design & Development",
-        "Testing & Delivery",
-      ],
+    {
+      title: "Clean scalable code",
       description:
-        "We follow clear steps so the project is organized, understandable, and ready for future growth.",
+        "Well-structured development that makes future upgrades easier, from new pages to dashboards, payments, or mobile apps.",
     },
+    {
+      title: "Focus on project goals",
+      description:
+        "We focus on what the client actually needs: clearer communication, better conversions, and a smoother user experience.",
+    },
+  ],
+},
+process: {
+  label: "Process",
+  title: "How We Work",
+  steps: [
+    {
+      title: "Discovery",
+      description:
+        "We start by understanding the project goal, target users, required features, and the problem you want to solve.",
+    },
+    {
+      title: "Planning",
+      description:
+        "We define the pages, core features, database needs, and suitable technologies before development begins.",
+    },
+    {
+      title: "Design & Development",
+      description:
+        "We build the interface and software logic in a clean, responsive, and scalable way.",
+    },
+    {
+      title: "Testing & Delivery",
+      description:
+        "We review performance, mobile responsiveness, links, and user experience before launch.",
+    },
+  ],
+},
 
     about: {
       label: "About",
@@ -585,17 +631,16 @@ export default async function Home({
               {t.why.title}
             </h2>
           </div>
-
-          <div className="grid gap-5 md:col-span-2 md:grid-cols-3">
+<div className="grid gap-5 md:col-span-2 md:grid-cols-3">
             {t.why.items.map((item) => (
-              <div key={item} className="rounded-3xl bg-black/20 p-6">
-                <div className="mb-5 h-10 w-10 rounded-full bg-[#4da3ff]" />
-                <h3 className="font-bold">{item}</h3>
-                <p className="mt-3 text-sm leading-7 text-white/50">
-                  {t.why.description}
-                </p>
-              </div>
-            ))}
+  <div key={item.title} className="rounded-3xl bg-black/20 p-6">
+    <div className="mb-5 h-10 w-10 rounded-full bg-[#4da3ff]" />
+    <h3 className="font-bold">{item.title}</h3>
+    <p className="mt-3 text-sm leading-7 text-white/50">
+      {item.description}
+    </p>
+  </div>
+))}
           </div>
         </div>
       </section>
@@ -614,17 +659,17 @@ export default async function Home({
           </h2>
 
           <div className="mt-12 grid gap-6 md:grid-cols-4">
-            {t.process.steps.map((step, index) => (
-              <div key={step} className="rounded-3xl bg-black/20 p-6">
-                <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#4da3ff] text-lg font-black text-[#05070f]">
-                  {index + 1}
-                </span>
-                <h3 className="text-lg font-bold">{step}</h3>
-                <p className="mt-4 leading-7 text-white/55">
-                  {t.process.description}
-                </p>
-              </div>
-            ))}
+{t.process.steps.map((step, index) => (
+  <div key={step.title} className="rounded-3xl bg-black/20 p-6">
+    <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#4da3ff] text-lg font-black text-[#05070f]">
+      {index + 1}
+    </span>
+    <h3 className="text-lg font-bold">{step.title}</h3>
+    <p className="mt-4 leading-7 text-white/55">
+      {step.description}
+    </p>
+  </div>
+))}
           </div>
         </div>
       </section>
