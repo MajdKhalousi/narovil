@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "../components/Reveal";
 import NavProgress from "../components/NavProgress";
+import Header from "../components/Header";
 
 const whatsappUrl = "https://wa.me/905550000400";
 
@@ -157,49 +158,20 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <main lang={currentLocale} dir={t.dir} className="min-h-screen overflow-hidden bg-[#05070f] text-white">
       <NavProgress />
 
-      {/* Navbar */}
-      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#05070f]/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="relative h-11 w-11 overflow-hidden rounded-2xl border border-white/10 bg-white transition-transform group-hover:scale-105">
-              <Image src="/narovil-logo.png" alt="NAROVIL logo" fill sizes="44px" className="object-cover" priority />
-            </div>
-            <div>
-              <h1 className="text-base font-bold tracking-[0.28em] text-white">NAROVIL</h1>
-              <p className="text-[10px] text-white/40">Software Studio</p>
-            </div>
-          </a>
+      
 
-          <nav className="hidden items-center gap-7 text-sm text-white/60 md:flex">
-            {([
-              ["#services", t.nav.services],
-              ["#solutions", t.nav.solutions],
-              ["#packages", currentLocale === "ar" ? "الباقات" : "Packages"],
-              ["#why", t.nav.why],
-              ["#process", t.nav.process],
-              ["#about", t.nav.about],
-              ["#contact", t.nav.contact],
-            ] as [string, string][]).map(([href, label]) => (
-              <a key={href} href={href} className="relative transition hover:text-white group">
-                {label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#4da3ff] transition-all group-hover:w-full" />
-              </a>
-            ))}
-          </nav>
 
-          <div className="flex items-center gap-2">
-            <a href={t.switchTo} className="inline-flex rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/60 transition hover:bg-white/10 hover:text-white md:px-4">
-              {t.langSwitch}
-            </a>
-            <a href={whatsappUrl} target="_blank" className="rounded-full bg-[#4da3ff] px-4 py-2 text-xs font-bold text-[#05070f] transition hover:bg-[#7dbdff] hover:scale-105 md:px-5">
-              {t.nav.whatsapp}
-            </a>
-          </div>
-        </div>
-      </header>
+<Header
+  currentLocale={currentLocale}
+  switchTo={t.switchTo}
+  langSwitch={t.langSwitch}
+  whatsappUrl={whatsappUrl}
+  nav={t.nav}
+/>
+
 
       {/* Hero */}
-      <section className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 md:min-h-[calc(100vh-73px)] md:grid-cols-2 md:py-20">
+      <section className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 pb-14 pt-32 md:grid-cols-2 md:pb-24 md:pt-40">
         <div className="absolute right-0 top-20 h-80 w-80 rounded-full bg-[#4da3ff]/10 blur-3xl glow-pulse" />
         <div className="absolute bottom-20 left-0 h-80 w-80 rounded-full bg-[#4da3ff]/08 blur-3xl glow-pulse" style={{ animationDelay: "2s" }} />
 
