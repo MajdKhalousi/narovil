@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cairo, Inter } from "next/font/google";
 import "./globals.css";
+import ClientShell from "./components/ClientShell";
 
 const cairo = Cairo({
   variable: "--font-cairo",
@@ -16,83 +17,49 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://narovil.vercel.app"),
-
   title: {
     default: "NAROVIL | Premium Software Studio",
     template: "%s | NAROVIL",
   },
-
   description:
     "NAROVIL is a premium software studio by Majd Khalousi, specialized in web development, Flutter apps, dashboards, APIs, e-commerce solutions, and custom software systems.",
-
   keywords: [
-    "NAROVIL",
-    "Majd Khalousi",
-    "software studio",
-    "web development",
-    "Flutter apps",
-    "dashboard development",
-    "API development",
-    "e-commerce development",
-    "custom software",
-    "تطوير مواقع",
-    "تطوير تطبيقات Flutter",
-    "برمجة مواقع",
-    "أنظمة إدارة",
-    "متاجر إلكترونية",
-    "لوحات تحكم",
+    "NAROVIL","Majd Khalousi","software studio","web development",
+    "Flutter apps","dashboard development","API development",
+    "e-commerce development","custom software",
+    "تطوير مواقع","تطوير تطبيقات Flutter","برمجة مواقع",
+    "أنظمة إدارة","متاجر إلكترونية","لوحات تحكم",
   ],
-
   authors: [{ name: "Majd Khalousi" }],
   creator: "Majd Khalousi",
   publisher: "NAROVIL",
-
- icons: {
-  icon: "/icon.png",
-  shortcut: "/icon.png",
-  apple: "/icon.png",
-},
-
+  icons: { icon: "/icon.png", shortcut: "/icon.png", apple: "/icon.png" },
   openGraph: {
     title: "NAROVIL | Premium Software Studio",
-    description:
-      "Premium software solutions for websites, Flutter apps, dashboards, APIs, e-commerce, and custom systems.",
+    description: "Premium software solutions for websites, Flutter apps, dashboards, APIs, e-commerce, and custom systems.",
     url: "https://narovil.vercel.app",
     siteName: "NAROVIL",
-    images: [
-      {
-        url: "/narovil-logo.png",
-        width: 1024,
-        height: 1024,
-        alt: "NAROVIL Logo",
-      },
-    ],
+    images: [{ url: "/narovil-logo.png", width: 1024, height: 1024, alt: "NAROVIL Logo" }],
     locale: "ar",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "NAROVIL | Premium Software Studio",
-    description:
-      "Premium software solutions for websites, Flutter apps, dashboards, APIs, e-commerce, and custom systems.",
+    description: "Premium software solutions for websites, Flutter apps, dashboards, APIs, e-commerce, and custom systems.",
     images: ["/narovil-logo.png"],
   },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ar" dir="rtl" className={`${cairo.variable} ${inter.variable}`}>
-      <body className="min-h-screen font-sans antialiased">{children}</body>
+      <body className="min-h-screen font-sans antialiased">
+        <ClientShell>{children}</ClientShell>
+      </body>
     </html>
   );
 }
